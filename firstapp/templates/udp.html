@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {% if sucess %}
+    <script>
+        alert("successfully done")
+    </script>
+    {% endif %}
+<label> userID </label>
+<input type="text" name="userid">
+<br/>
+
+<label> useName </label>
+<input type="text" name="username">
+<br/>
+
+<label> userPassword </label>
+<input type="text" name="userpassword">
+<br/>
+
+<label> userEmail </label>
+<input type="text" name="useremail">
+<br/>
+
+<input type="submit" value="update">
+    </form>
+</body>
+</html>

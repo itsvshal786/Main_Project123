@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <table border="1" cellspacing="1" cellpadding="10">
+    <tr>
+        <td>FullName</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Mobile</td>
+    </tr>
+    {% if d %}
+    {% for i in d %}
+    <tr>
+        <td>{{i.userFullName}}</td>
+        <td>{{i.userEmail}}</td>
+        <td>{{i.userPassword}}</td>
+        <td>{{i.userMobile}}</td>
+        <td><a href="/user/delete/?id={{i.userID}}"> Delete </a> </td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+
+
+</table>
+</body>
+</html>
